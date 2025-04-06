@@ -99,7 +99,7 @@ const IdentityGeneratorForm: React.FC<IdentityGeneratorFormProps> = ({ onIdentit
                     <SelectValue placeholder="Sélectionner un genre" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Aléatoire</SelectItem>
+                    <SelectItem value="random">Aléatoire</SelectItem>
                     <SelectItem value="male">Homme</SelectItem>
                     <SelectItem value="female">Femme</SelectItem>
                     <SelectItem value="other">Autre</SelectItem>
@@ -117,7 +117,7 @@ const IdentityGeneratorForm: React.FC<IdentityGeneratorFormProps> = ({ onIdentit
                     <SelectValue placeholder="Sélectionner une nationalité" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Aléatoire</SelectItem>
+                    <SelectItem value="random">Aléatoire</SelectItem>
                     <SelectItem value="Française">Française</SelectItem>
                     <SelectItem value="Belge">Belge</SelectItem>
                     <SelectItem value="Suisse">Suisse</SelectItem>
