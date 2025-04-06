@@ -1,0 +1,11 @@
+
+# Configuration pour Netlify
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Redirection pour les applications Single Page Application (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
