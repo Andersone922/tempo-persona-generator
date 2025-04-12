@@ -25,22 +25,23 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        // Palette de couleurs moderne et élégante
         primary: {
-          DEFAULT: "#6A5ACD", // Slate Blue
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
           50: "#EDE9FE",
           100: "#DDD6FE",
           200: "#C4B5FD",
           300: "#A78BFA",
           400: "#9333EA",
-          500: "#6A5ACD", // Main primary color
+          500: "#6A5ACD",
           600: "#5B40B8",
           700: "#4C37A3",
           800: "#3D2E8E",
           900: "#2E257A"
         },
         secondary: {
-          DEFAULT: "#4FD1C5", // Teal
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
           50: "#E6FFFA",
           100: "#B2F5EA",
           200: "#81E6D9",
@@ -53,7 +54,8 @@ export default {
           900: "#1D4044"
         },
         accent: {
-          DEFAULT: "#ED64A6", // Pink
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
           50: "#FFF5F7",
           100: "#FED7E2",
           200: "#FBB6CE",
@@ -65,14 +67,22 @@ export default {
           800: "#702459",
           900: "#4A1D4D"
         },
-        background: {
-          DEFAULT: "#F7FAFC", // Light Gray Background
-          dark: "#1A202C" // Dark mode background
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-        foreground: {
-          DEFAULT: "#2D3748", // Dark Gray Text
-          light: "#4A5568"
-        }
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover, var(--background)))",
+          foreground: "hsl(var(--popover-foreground, var(--foreground)))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card, var(--background)))",
+          foreground: "hsl(var(--card-foreground, var(--foreground)))",
+        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -85,19 +95,17 @@ export default {
         'elegant': '0 15px 30px -10px rgba(0, 0, 0, 0.15)',
       },
       keyframes: {
-        ...{
-          "accordion-down": {
-            from: { height: "0" },
-            to: { height: "var(--radix-accordion-content-height)" },
-          },
-          "accordion-up": {
-            from: { height: "var(--radix-accordion-content-height)" },
-            to: { height: "0" },
-          },
-          "fade-in": {
-            from: { opacity: "0" },
-            to: { opacity: "1" }
-          }
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" }
         }
       },
       animation: {
