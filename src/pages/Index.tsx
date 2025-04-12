@@ -6,11 +6,14 @@ import IdentityCard from "@/components/identity/IdentityCard";
 import { Identity, getRandomIdentities } from "@/lib/identity-generator";
 import { getHistory } from "@/lib/storage-service";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Clock, Heart } from "lucide-react";
+import { Clock } from "lucide-react";
+import { useSettings } from "@/lib/settings-context";
+import SettingsButton from "@/components/navigation/SettingsButton";
 
 const Index = () => {
   const [currentIdentity, setCurrentIdentity] = useState<Identity | null>(null);
   const [historyItems, setHistoryItems] = useState<Identity[]>([]);
+  const { settings } = useSettings();
   
   useEffect(() => {
     // Load history from localStorage
@@ -45,6 +48,10 @@ const Index = () => {
       <MainNavigation />
       
       <main className="flex-grow container py-8">
+        <div className="flex justify-end mb-4">
+          <SettingsButton />
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Column - Generator Form */}
           <div className="md:col-span-1 space-y-6">
