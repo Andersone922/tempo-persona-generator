@@ -8,13 +8,13 @@
     --background: 210 40% 98.0%;
     --foreground: 222.2 47.4% 11.2%;
 
-    --primary: 240 67% 65%; // Slate Blue
+    --primary: 240 67% 65%; /* Slate Blue */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 170 70% 50%; // Teal
+    --secondary: 170 70% 50%; /* Teal */
     --secondary-foreground: 210 40% 98%;
 
-    --accent: 340 82% 65%; // Pink
+    --accent: 340 82% 65%; /* Pink */
     --accent-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
@@ -62,7 +62,7 @@
   }
 }
 
-// Ajout de classes personnalisées pour des effets visuels
+/* Ajout de classes personnalisées pour des effets visuels */
 @layer utilities {
   .glass-background {
     @apply backdrop-blur-md bg-white/30 dark:bg-black/30 rounded-xl;
